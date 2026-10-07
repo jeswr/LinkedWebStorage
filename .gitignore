@@ -1,0 +1,8 @@
+/.eslintcache
+/componentsjs-error-state.json
+/coverage
+/data
+/dist
+/node_modules
+/test/tmp
+*.tsbuildinfo

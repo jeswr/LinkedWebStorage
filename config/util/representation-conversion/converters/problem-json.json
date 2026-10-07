@@ -1,0 +1,13 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^8.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server-lws/^0.0.0/components/context.jsonld"
+  ],
+  "@graph": [
+    {
+      "comment": "Converts errors to problem details documents, as recommended by LWS.",
+      "@id": "urn:solid-server:default:ErrorToProblemJsonConverter",
+      "@type": "ErrorToProblemJsonConverter"
+    }
+  ]
+}
