@@ -9,6 +9,7 @@
       "@id": "urn:solid-server:default:ContainerToLwsJsonConverter",
       "@type": "ContainerToLwsJsonConverter",
       "options_pageSize": 1000,
+      "options_strictPreferences": true,
       "options_outputPreferences": [
         {
           "ContainerToLwsJsonConverter:_options_outputPreferences_key": "application/lws+json",

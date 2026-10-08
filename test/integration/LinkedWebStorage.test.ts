@@ -300,6 +300,14 @@ describe.each(combinations)('A %s server using %s', (protocol, authorization, pr
     expect(Array.isArray(body)).toBe(protocolArgs.dual);
   });
 
+  it('respects a client preference for Turtle over JSON.', async(): Promise<void> => {
+    const response = await fetch(container, {
+      headers: { authorization: `Bearer ${aliceToken}`, accept: 'text/turtle;q=0.9,application/json;q=0.8' },
+    });
+    expect(response.status).toBe(200);
+    expect(response.headers.get('content-type')).toBe('text/turtle');
+  });
+
   const wildcardResult = protocolArgs.dual ? 'the root container' : 'the storage description';
 
   it(`returns ${wildcardResult} for */*.`, async(): Promise<void> => {
